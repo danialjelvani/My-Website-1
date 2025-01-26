@@ -15,13 +15,34 @@
 
         <style>
 
-            body, table {font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-            th, td {text-align:center;}
-            p {font-family:sans-serif;color: rgb(255, 255, 255);}
-            nav a {margin: 10px; text-decoration:none;}
-            main {padding: 10px;}
-            section {margin-bottom: 10px;padding: 10px;}
-            aside {padding: 10px;}
+            body, table {
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            table th {
+                text-align:left;
+                color:rgb(0, 0, 0);
+                border: 2px solid rgb(215, 124, 124);
+                padding: 10px;
+            }
+            table td {
+                color:rgb(181, 182, 184);
+                border: 1px solid rgb(215, 124, 124);
+                padding: 10px;
+                text-align: center;
+            }
+            p {
+                font-family:sans-serif;
+                color: rgb(255, 255, 255);
+            }
+            nav a {
+                margin: 10px;
+                text-decoration:none;
+                color: rgb(255, 255, 255);
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            aside {
+                padding: 10px;
+            }
             .footer {
                 display: flex;
                 align-items: center;
@@ -41,11 +62,23 @@
             }
             .header nav {
                 text-align: center;
+                background: linear-gradient(to left, rgba(44, 81, 122, 0) , rgba(0, 0, 0, 0.847));
+                color:white ;
+                padding: 20px;
             }
             .table {
                 display: grid;
-                align-items: center;
                 justify-content: center;
+            }
+            fieldset {
+                display: unset;
+            }
+            legend {
+                font-size: larger;
+                color: #000000;
+            }
+            fieldset input {
+                background-color: #f9e6e6;
             }
             .appointment {
                 padding-left: 10px;
@@ -70,89 +103,92 @@
         <div class="header">
 
             <h1 style="margin-left: 10px; color: rgb(255, 255, 255); letter-spacing: -2px;">Discover Your Best at
-            <div style="background: linear-gradient(to right, rgba(0, 0, 0, 0) , rgba(60, 89, 94, 0));color: #000000; font-family: ;letter-spacing: 2px; word-spacing: 5px; font-size:40px;padding: 1px;">Dr. Danial Jelvani</div>
+            <div style="color: #000000;letter-spacing: 2px; word-spacing: 5px; font-size:40px; padding: 1px;">Dr. Danial Jelvani</div>
             <b style="letter-spacing: -1px; word-spacing: 0px;">Aesthetic Clinic</b></h1>
 
-                <nav style="background: linear-gradient(to left, rgba(44, 81, 122, 0) , rgba(0, 0, 0, 0.847)); color:white ;padding: 20px;">
-                    <a href="#home" style="color: rgb(255, 255, 255); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Home&nbsp;&nbsp;&nbsp;</a> |
-                    <a href="#beforeafter"style="color: rgb(255, 255, 255); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;&nbsp;&nbsp;Before/After Photos&nbsp;&nbsp;&nbsp;</a> |
-                    <a href="#about" style="color: rgb(255, 255, 255); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;</a> |
-                    <a href="#bookappointment" style="color: rgb(255, 255, 255); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;&nbsp;&nbsp;Contact</a>
+                <nav>
+                    <a href="#home">Home&nbsp;&nbsp;&nbsp;</a> |
+                    <a href="#beforeafter">&nbsp;&nbsp;&nbsp;Before/After Photos&nbsp;&nbsp;&nbsp;</a> |
+                    <a href="#about">&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;</a> |
+                    <a href="#bookappointment">&nbsp;&nbsp;&nbsp;Contact</a>
                 </nav>
 
         </div>
 
     <div class="main">
 
-        <p style="color: #dcdee3; font-family: sans-serif;">In this table you can see which non-invasive procedures you might benefit from:
-         <p style="color: #dcdee3; font-family: sans-serif; font-size:small;">( Note that procedures are discussed in detail during the consultation visit )</p>
+        <p>In this table you can see which non-invasive procedures you might benefit from:
+         <p style="font-size:small;">( Note that procedures are discussed in detail during the consultation visit )</p>
         </p>
+
         <div class="table">
         <table style="border-collapse: collapse; width:550px; table-layout: fixed;">
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;">Area\Treatment</th>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;">Dermal Fillers</th>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;">Botolinum Toxin</th>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;">Threads</th>
+                <th style="text-align: center;">Area\Treatment</th>
+                <th style="text-align: center;">Dermal Fillers</th>
+                <th style="text-align: center;">Botolinum Toxin</th>
+                <th style="text-align: center;">Threads</th>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Tear Trough</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Tear Trough</td>
+                <td>yes</td>
+                <td>no</td>
+                <td>no</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Nasolabial Fold</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
+                <th>Nasolabial Fold</td>
+                <td>yes</td>
+                <td>no</td>
+                <td>yes</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Jowls</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
+                <th>Jowls</td>
+                <td>yes</td>
+                <td>no</td>
+                <td>yes</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Frown Lines</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Frown Lines</td>
+                <td>no</td>
+                <td>yes</td>
+                <td>no</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Forhead Lines</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Forhead Lines</td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>no</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Crows Feet</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Crows Feet</td>
+                <td style="">yes</td>
+                <td>yes</td>
+                <td>no</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Gummy Smile</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Gummy Smile</td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>no</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Neck Lines</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Neck Lines</td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>no</td>
             </tr>
             <tr>
-                <th style="color:rgb(0, 0, 0); border: 2px solid rgb(215, 124, 124); padding: 10px;text-align: center;">Lip, Chin & Cheek Augmentation</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">yes</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
-                <td style="color:rgb(181, 182, 184); border: 1px solid rgb(215, 124, 124); padding: 10px;text-align: center">no</td>
+                <th>Lip, Chin & Cheek Augmentation</td>
+                <td>yes</td>
+                <td>no</td>
+                <td>no</td>
             </tr>
         </table><br>
         </div>
     </div>
 
+    <fieldset>
+    <legend>&nbsp;Book an Appointment&nbsp;</legend>
     <div class="appointment">
     <section id="bookappointment">
 
@@ -160,13 +196,13 @@
 
             <form action="./2.txt" method="post" style="color: white;font-family: sans-serif;">
                 <h5><label for="name">Full Name:<br></label>
-                <input type="text" name="name" id="name"><br><br>
+                <input type="text" name="name" id="name" required><br><br>
 
                 <label for="age">Mobile Number:<br></label>
-                <input type="number" name="number" id="number"><br><br>
+                <input type="number" name="number" id="number" required><br><br>
 
                 <label for="password">Password:<br></label>
-                <input type="password" name="password" id="password"><br><br>
+                <input type="password" name="password" id="password" required><br><br>
 
                 <label for="email">Email:<br></label>
                 <input type="email" name="email" id="email"><br><br>
@@ -175,17 +211,19 @@
                 <input type="date" name="date" id="date"><br><br>
 
                 <label>Gender:<br></label>
-                <input type="radio" name="gender" id="male" value="male">
+                <input type="radio" name="gender" id="male" value="male" required>
                 <label for="male">Male</label>
                 <input type="radio" name="gender" id="female" value="female">
                 <label for="female">Female</label>
                 <br><br>
 
-
-                <input type="submit" value="Request an Appointment" style="background-color: rgb(136, 18, 18); color: rgb(255, 255, 255);">
+                <label><input type="checkbox" name="offer" checked>Get notified for discount offers.</label><br><br>
+                <button type="submit" style="background-color: rgb(136, 18, 18); color: rgb(255, 255, 255); padding: 8px;">Request an Appointment</button>
             </form></h5>
+
     </section>
     </div>
+    </fieldset>
 
         <aside>
             <h2>Related Links</h2>
