@@ -67,10 +67,15 @@
                 padding: 20px;
             }
             #nightmode {
-                margin-top: 5px;
-                border-radius: 3px;
-                background-color: whitesmoke;
-                padding-bottom: 3px;
+                position:absolute;
+                top: 230px;
+                right: 1px;
+                background-color: rgb(154, 149, 149);
+                transition: transform 1s ease, background-color 1s ease;
+                border-bottom-left-radius: 15px;
+                border: unset;
+                padding-left: 13px;
+                padding-bottom: 4px;
             }
             .table {
                 display: grid;
@@ -152,7 +157,7 @@
                             document.body.style.background = 'linear-gradient(to left , rgb(120, 103, 110), rgb(184, 45, 45))';
                             document.body.setAttribute('data-bg', 'gradient1');
                             document.getElementById('nightmode').style.color = 'black';
-                            document.getElementById('nightmode').style.background = 'whitesmoke';
+                            document.getElementById('nightmode').style.background = 'rgb(154, 149, 149)';
                             document.getElementById('nightmode').innerText = 'Night Mode: Off';
                         }
                     }
@@ -161,9 +166,9 @@
 
     <div class="main">
 
-        <p>In this table you can see which non-invasive procedures you might benefit from:
+        <p><br>In this table you can see which non-invasive procedures you might benefit from:
          <p style="font-size:small;">( Note that procedures are discussed in detail during the consultation visit )</p>
-        </p>
+        </p><br>
 
         <div class="table">
         <table style="border-collapse: collapse; width:550px; table-layout: fixed;">
