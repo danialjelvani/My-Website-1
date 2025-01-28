@@ -18,13 +18,21 @@
             body, table {
                 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
+            #table {
+                border-collapse: collapse;
+                height: auto;
+                width: 100%;
+                max-width:600px;
+                min-width: 300px;
+                table-layout: fixed;
+            }
             table th {
                 text-align:left;
                 color:rgb(210, 194, 194);
                 border: 2px solid rgb(215, 124, 124);
-                padding: 2px;
+                padding: 5px;
                 padding-left: 5px;
-                font-size: 14px;
+                font-size: 15px;
             }
             table td {
                 color:rgb(181, 182, 184);
@@ -130,8 +138,18 @@
                 justify-content: flex-end;
             }
 
-            @media (max-width: 768px) {
-
+            @media (max-width: 480px) {
+                nav a {
+                    margin: unset;
+                    line-height: 40px;
+                }
+                #table {
+                    table-layout: unset;
+                }
+                table th {
+                    font-size: 13px;
+                    padding: 6px;
+                }
             }
 
         </style>
@@ -205,12 +223,11 @@
             });
         </script>
 
-        <div class="table">
-        <table id="table" style="border-collapse: collapse;height: auto;width: 100%;max-width:600px;min-width: 300px;">
+        <table id="table">
             <tr>
                 <th style="text-align: center;">Area<br>Treatment</th>
                 <th style="text-align: center;">Dermal Fillers</th>
-                <th style="text-align: center;">Botolinum Toxin</th>
+                <th style="text-align: center;">Botulinum Toxin</th>
                 <th style="text-align: center;">Threads</th>
             </tr>
             <tr>
@@ -268,7 +285,6 @@
                 <td>no</td>
             </tr>
         </table><br>
-        </div>
     </div>
 
     <fieldset>
@@ -339,66 +355,10 @@
             </ul>
         </aside>
 
-        <div class="container">
-            <div class="box">Box 1</div>
-            <div class="box">Box 2</div>
-            <div class="box">Box 3</div>
-        </div>
-
-        <style>
-            .container {
-                display:flex;
-                justify-content:space-around; /* Aligns items horizontally */
-                align-items:center;   /* Aligns items vertically */
-                height: 10vh;         /* Full viewport height */
-                background-color: #201d1d;
-            }
-            .box {
-                background-color: #4CAF50;
-                color: white;
-                padding: 20px;
-                margin: 10px;
-                border-radius: 5px;
-            }
-        </style>
-
-        <div class="responsive-container">
-            <div>num 1</div>
-            <div>num 2</div>
-            <div>num 3</div>
-            <div>num 4</div>
-        </div>
-
-        <style>
-            .responsive-container {
-                display:grid;
-                grid-template-columns: repeat(4,1fr);
-                background-color: #494141;
-                gap: 5px;
-                padding: 10px;
-            }
-            .responsive-container div {
-                background-color: #4CAF50;
-                padding: 25px;
-                text-align: center;
-                font-size: x-large;
-            }
-            @media (max-width: 1000px) {
-                .responsive-container{
-                    grid-template-columns: repeat(2,1fr);
-                }
-            }
-        </style>
-
-
-
-
-
-
 
         <div class="footer">
             <footer>
-                <p style="font-size: small;">&copy; 2025 DanialJelvani Website. All rights reserved.</p>
+                <p style="font-size: small;">&copy; 2025 The Content and Design of This Website Belongs to DanialJelvani. All Rights Reserved.</p>
             </footer>
         </div>
 
