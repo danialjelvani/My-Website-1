@@ -52,8 +52,6 @@
                 margin-left: 20px;
                 margin-right: 20px;
                 padding: 10px;
-                justify-content: center;
-                align-items: center;
             }
             .header h1 {
                 justify-content: center;
@@ -67,9 +65,10 @@
                 padding: 20px;
             }
             #nightmode {
-                position:absolute;
-                top: 230px;
-                right: 1px;
+                position:relative;
+                margin-right: 0;
+                margin-left: auto;
+                width: fit-content;
                 background-color: rgb(154, 149, 149);
                 transition: transform 1s ease, background-color 1s ease;
                 border-bottom-left-radius: 15px;
@@ -80,6 +79,14 @@
             .table {
                 display: grid;
                 justify-content: center;
+            }
+            #toggletable {
+                background-color: rgb(84, 2, 2);
+                color: rgb(231, 198, 198);
+                border: unset;
+                padding: 5px;
+                border-radius: 3px;
+                width: 80px;
             }
             fieldset {
                 display: unset;
@@ -116,6 +123,13 @@
             button:hover {
                 box-shadow: 0 1px 4px rgb(222, 175, 175);
             }
+            .hidden{
+                display: none;
+            }
+            .container2 {
+                display: flex;
+                justify-content: flex-end;
+            }
 
             @media (max-width: 768px) {
 
@@ -143,7 +157,9 @@
                     <a href="#bookappointment">&nbsp;&nbsp;&nbsp;Contact</a>
                 </nav>
 
-                <button id="nightmode" onclick="changebackground()">Night Mode: Off</button>
+        <div class="container2">
+            <button id="nightmode" onclick="changebackground()">Night Mode: Off</button>
+        </div>
                 <script>
                     function changebackground() {
                         if (document.body.getAttribute('data-bg') === 'gradient1') {
@@ -166,12 +182,26 @@
 
     <div class="main">
 
-        <p><br>In this table you can see which non-invasive procedures you might benefit from:
+        <p><br>In the table below you can see which non-invasive procedures you might benefit from:
          <p style="font-size:small;">( Note that procedures are discussed in detail during the consultation visit )</p>
-        </p><br>
+        </p>
+
+        <button id="toggletable">Hide Table</button><br><br>
+        <script>
+            document.getElementById('toggletable').addEventListener('click', function() {
+                let table = document.getElementById('table');
+                if (table.classList.contains('hidden')) {
+                    table.classList.remove('hidden');
+                    document.getElementById('toggletable').innerText = 'Hide Table';
+                } else {
+                    table.classList.add('hidden');
+                    document.getElementById('toggletable').innerText = 'Show Table';
+                }
+            });
+        </script>
 
         <div class="table">
-        <table style="border-collapse: collapse; width:550px; table-layout: fixed;">
+        <table id="table" style="border-collapse: collapse; width:550px; table-layout: fixed;">
             <tr>
                 <th style="text-align: center;">Area\Treatment</th>
                 <th style="text-align: center;">Dermal Fillers</th>
@@ -243,7 +273,7 @@
 
         <p style="line-height: 25px; font-family: sans-serif;">To have your consultation visit with dr. Jelvani<br>fill in the form below and request an appointment.</p>
 
-            <form action="./2.txt" method="post" style="color: white;font-family: sans-serif;">
+            <form id="appointmentform" action="./2.txt" method="post" style="color: white;font-family: sans-serif;">
                 <label for="name">Full Name:<br></label>
                 <input type="text" name="name" id="name" minlength="6" required><br><br>
 
@@ -251,7 +281,7 @@
                 <input type="number" name="number" id="number" minlength="11" required><br><br>
 
                 <label for="password">Password:<br></label>
-                <input type="password" name="password" id=minlength="6" "password" minlength="6" pattern="[A-Za-z]{6,12}" required><br><br>
+                <input type="password" name="password" id="password" minlength="6" pattern="[A-Za-z]{6,12}" required><br><br>
 
                 <label for="email">Email:<br></label>
                 <input type="email" name="email" id="email"><br><br>
@@ -277,7 +307,22 @@
 
                 <button type="submit" style="background-color: rgb(136, 18, 18); color: rgb(255, 255, 255); padding: 7px;">Request an Appointment</button>
             </form>
-
+            <script>
+                document.getElementById('appointmentform').addEventListener('submit', function(event) {
+                    let name = document.getElementById('name').value;
+                    let number = document.getElementById('number').value;
+                    let password = document.getElementById('password').value;
+                    const genders = document.getElementsByName('gender');
+                    let gender = null;
+                    for (const i of genders) {
+                        if (i.checked) {
+                            gender = i.value;
+                            break;
+                        }
+                    };
+                    alert('Appointment requested successfully!');
+                });
+            </script>
     </section>
     </div>
     </fieldset>
