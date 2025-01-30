@@ -1,4 +1,0 @@
-#external css:
-to link external css file(styles.css) with html, add this code to
-<head> tag.
-<link rel="stylesheet" href="styles.css">
