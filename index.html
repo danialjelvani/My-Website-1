@@ -219,7 +219,7 @@
                             document.getElementById('nightmode').style.color = 'lightblue';
                             document.getElementById('nightmode').style.background = 'black';
                             document.getElementById('nightmode').innerText = 'Night Mode: On ';
-                            for (let i of ['number','name','password','email','date','country','photo']) {
+                            for (let i of ['number','name','password','email','date','country','photo','msg']) {
                                 document.getElementById(i).style.background = 'grey';
                             }
                         }
@@ -229,7 +229,7 @@
                             document.getElementById('nightmode').style.color = 'black';
                             document.getElementById('nightmode').style.background = 'rgb(154, 149, 149)';
                             document.getElementById('nightmode').innerText = 'Night Mode: Off';
-                            for (let i of ['number','name','password','email','date','country','photo']) {
+                            for (let i of ['number','name','password','email','date','country','photo','msg']) {
                                 document.getElementById(i).style.background = 'white';
                             }
                         }
@@ -360,6 +360,10 @@
                 <input type="radio" name="gender" id="female" value="female">
                 <label for="female">Female</label>
                 <br><br>
+
+                <label for="msg">Your History of Previous Aesthetic Procedures Including both Surgical & Non-surgical:
+                </label><br>
+                <textarea id="msg" name="msg" rows="5" cols="20" required style="margin-block: 3px;"></textarea><br>
 
                 <label style="font-size: smaller;"><input type="checkbox" name="offer" checked>Notify me for discount offers.</label><br><br>
 
